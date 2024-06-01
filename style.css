@@ -1,45 +1,79 @@
-h1
-{
-    font-size: 80px;
-    font-family: Impact;
-}
-p{
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    unicode-bidi: isolate;
-    font-size: 35px;
-}
-button
-{
-    width: 250px;
-    height: 80px;
-    background-color: blue;
-    color: white;
-    border: 2px solid black !important;
-    transition:  color  1s;
+
+
+h1 {
+    font-size: 50px;
+    font-family: "Pacifico", cursive;
+    color: #352e28;
+    isolation: isolate;
+    position: relative;
 }
 
-.btn:hover {
-    color: var(--bs-btn-hover-color);
-    background-color: green;
-    
+body {
+    background-color: #F7ECDE;
 }
-.btn-primary {
-    --bs-btn-color: #fff;
-    --bs-btn-bg: #0d6efd;
-    --bs-btn-border-color: #0d6efd;
-    --bs-btn-hover-color: #fff;
-    --bs-btn-hover-bg: #0b5ed7;
-    --bs-btn-hover-border-color: #0a58ca;
-   --bs-btn-focus-shadow-rgb: none;
-    --bs-btn-active-color: #fff;
-    --bs-btn-active-bg: #0a58ca;
-    --bs-btn-active-border-color: #0a53be;
-    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-    --bs-btn-disabled-color: #fff;
-    --bs-btn-disabled-bg: #0d6efd;
-    --bs-btn-disabled-border-color: #0d6efd;
+
+/* h2 {
+    font-family: "Righteous", cursive;
+    font-size: 25px;
+   color: linear-gradient(to right, #3ca55c, #b5ac49);
+   
+    -webkit-text-fill-color: transparent;
+    margin: 0 10px;
+} */
+h2 {
+    font-family: "Righteous";
+    font-size: 25px;
+    background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.icon-text i {
+    font-size: 25px;
+    margin: 0 10px;
+    background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+    -webkit-text-fill-color: transparent;
+}
+.icon-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-text i {
+    font-size: 25px;
+    margin: 0 10px;
+    background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+   
+    -webkit-text-fill-color: transparent;
+   
+}
+
+.fa-solid, .fas {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+}
+table
+{
+    background-color: white;
+}
+ h1::before {
+    content: "";
+    position: absolute;
+    width:100%;
+    height: 25%;
+    left: 0;
+    bottom: 10px;
+    background-color: #fec260;
+    transition: height 350ms;
+    z-index: -1;
+}
+::after, ::before {
+    box-sizing: border-box;
+}
+::selection {
+    background-color: #fec260;
+    color: #352e28;
+}
+h1:hover::before {
+    height: 50%;
 }

@@ -4,25 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container w-75 text-center ">
-       
-        
-            <div class="col-md-12 d-flex justify-content-center align-items-center flex-column">
-                <h1 class="fw-bolder text-center my-5">Quote of the Day</h1>
-                <p class="text-center">Press the button below to recieve a random quote!</p>
-                <button class=" btn btn-primary text-center" onclick=" genertaQoute()">New Qoute</button>
-                   
-            </div>
-       <p id="demo"> </p>
+<div class="container w-75">
+    <h1 class="text-center py-3 m-auto">Bookmarker</h1>
+<div class="text-center">....................................................................................................................................................................................................................................................................................................................................</div>
+   
+        <span class="icon-text py-5">
+            <i class="fa-regular fa-bookmark"></i>
+            <h2 class="">Bookmark your favorite sites</h2>
+            <i class="fa-regular fa-bookmark"></i>
+        </span>
+<div class="alert alert-danger text-center d-none" role="alert"id="forminvalid">form invaled Site Name or Url is not valid, Please follow the rules below :
 
-    </div>
-
-
-<script src="index.js"></script>
+    <i class="fa-solid fa-circle-arrow-right"></i>  Site name must contain at least 3 characters
+    <i class="fa-solid fa-circle-arrow-right"></i>  Site URL must be a valid one</div>
+    <label for="siteName" class="py-1"> <i class="fa-solid fa-book"></i> Site Name</label>
+    <input oninput="validtion (this)" type="text"  id="siteName"  class="form-control my-3 "placeholder='Bookmarker Name'>
+    <label for="siteurl" class="py-1"><i class="fa-solid fa-link"></i> Site URL</label>
+    <input  oninput=" validtion (this)" type="text"  id="siteurl"  class="form-control my-3 "placeholder='website url'>
+    <button onclick="addBooks()" type="button" class="btn btn-danger mt-2 text-center m-auto">Submet</button>
+    <div class="text-center">....................................................................................................................................................................................................................................................................................................................................</div>
+    <table class="table my-2">
+       <thead>
+       <th>Index</th>
+       <th>Website Name</th>
+       <th>Visit</th>
+       <th>Delete</th>
+       </thead>
+       <tbody id="dataTable">
+      
+       </tbody>
+    </table>
+</div>
+<script src="index..js"></script>
 </body>
 </html>
